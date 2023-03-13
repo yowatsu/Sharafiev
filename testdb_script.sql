@@ -53,25 +53,25 @@ CREATE TABLE IF NOT EXISTS Genre(
 
 DROP TABLE IF EXISTS `Track Genre`;
 CREATE TABLE IF NOT EXISTS `Track Genre`(
-  track_id int NOT NULL,
-  genre_id int NOT NULL,
-  PRIMARY KEY (track_id, genre_id),
-  FOREIGN KEY (track_id) REFERENCES Track(id),
-  FOREIGN KEY (genre_id) REFERENCES Genre(id)
+  	track_id int NOT NULL,
+  	genre_id int NOT NULL,
+  	PRIMARY KEY (track_id, genre_id),
+  	FOREIGN KEY (track_id) REFERENCES Track(id),
+  	FOREIGN KEY (genre_id) REFERENCES Genre(id)
 );
 
 CREATE TABLE IF NOT EXISTS `User Album`(
-  account_id int NOT NULL,
-  album_id int NOT NULL,
-  PRIMARY KEY (account_id, album_id),
-  FOREIGN KEY (account_id) REFERENCES `User`(account_id),
-  FOREIGN KEY (album_id) REFERENCES Album(id)
+  	account_id int NOT NULL,
+  	album_id int NOT NULL,
+  	PRIMARY KEY (account_id, album_id),
+  	FOREIGN KEY (account_id) REFERENCES `User`(account_id),
+  	FOREIGN KEY (album_id) REFERENCES Album(id)
 );
 
 CREATE TABLE IF NOT EXISTS `User Track`(
-  account_id int NOT NULL,
-  track_id int NOT NULL,
-  PRIMARY KEY (account_id, track_id),
-  FOREIGN KEY (account_id) REFERENCES `User`(account_id),
-  FOREIGN KEY (track_id) REFERENCES Track(id)
+ 	account_id int NOT NULL,
+  	track_id int NOT NULL,
+  	PRIMARY KEY (account_id, track_id),
+  	FOREIGN KEY (account_id) REFERENCES `User`(account_id),
+  	FOREIGN KEY (track_id) REFERENCES Track(id)
 );
